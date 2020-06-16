@@ -49,7 +49,7 @@ define('OBJECT_LIMIT', 100);
 /**
  * Contributing-developers of the phpMoAdmin project should set this to true, everyone else can leave this as false
  */
-define('DEBUG_MODE', true);
+define('DEBUG_MODE', false);
 
 /**
  * Vork core-functionality tools
@@ -879,7 +879,7 @@ class htmlHelper {
      * Sets the protocol (http/https) - this is modified from the original Vork version for phpMoAdmin usage
      */
     public function __construct() {
-        $this->_protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://');
+        $this->_protocol = 'https://';
     }
 
     /**
